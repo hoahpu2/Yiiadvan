@@ -1,0 +1,2293 @@
+2021-11-15 10:52:55 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in E:\yii-application\vendor\yiisoft\yii2\db\Connection.php:723
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(723): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#3 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#5 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#6 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#8 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#10 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#12 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#13 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\yii-application\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\yii-application\common\models\User.php(86): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\yii-application\common\models\LoginForm.php(74): common\models\User::findByUsername('aaaa')
+#18 E:\yii-application\common\models\LoginForm.php(45): common\models\LoginForm->getUser()
+#19 E:\yii-application\vendor\yiisoft\yii2\validators\InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'ssss')
+#20 E:\yii-application\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#21 E:\yii-application\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#22 E:\yii-application\common\models\LoginForm.php(59): yii\base\Model->validate()
+#23 E:\yii-application\frontend\controllers\SiteController.php(93): common\models\LoginForm->login()
+#24 [internal function]: frontend\controllers\SiteController->actionLogin()
+#25 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#27 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('login', Array)
+#28 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/login', Array)
+#29 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in E:\yii-application\vendor\yiisoft\yii2\db\Connection.php:649
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#1 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#3 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#4 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#6 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#8 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#10 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#11 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\yii-application\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\yii-application\common\models\User.php(86): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\yii-application\common\models\LoginForm.php(74): common\models\User::findByUsername('aaaa')
+#16 E:\yii-application\common\models\LoginForm.php(45): common\models\LoginForm->getUser()
+#17 E:\yii-application\vendor\yiisoft\yii2\validators\InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'ssss')
+#18 E:\yii-application\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#19 E:\yii-application\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#20 E:\yii-application\common\models\LoginForm.php(59): yii\base\Model->validate()
+#21 E:\yii-application\frontend\controllers\SiteController.php(93): common\models\LoginForm->login()
+#22 [internal function]: frontend\controllers\SiteController->actionLogin()
+#23 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#25 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('login', Array)
+#26 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/login', Array)
+#27 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#29 {main}
+Additional Information:
+
+2021-11-15 10:52:54 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'PVbWcgI7bHy6nsYe9bgyRBAWchsbABI2zXtp3flvF7V1ZKwdYE0oLsvy9nHDjloyKVkDa3g5VAX0Kz-wtytU4w=='
+    'LoginForm' => [
+        'username' => 'aaaa'
+        'password' => 'ssss'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'o75j68ngpvbfqcmrkcnghl7pe1'
+    '_csrf-frontend' => 'b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"H2zobvDRql0o66hv9Oqpc9F39PVmNDCV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '235'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://frontend-yii.local'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://frontend-yii.local/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => 'advanced-frontend=o75j68ngpvbfqcmrkcnghl7pe1; _csrf-frontend=b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22H2zobvDRql0o66hv9Oqpc9F39PVmNDCV%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '24711'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1636969974.946
+    'REQUEST_TIME' => 1636969974
+]
+2021-11-15 10:56:11 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in E:\yii-application\vendor\yiisoft\yii2\db\Connection.php:723
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(723): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#3 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#5 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#6 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#8 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#10 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#12 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#13 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\yii-application\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\yii-application\common\models\User.php(86): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\yii-application\common\models\LoginForm.php(74): common\models\User::findByUsername('aaaa')
+#18 E:\yii-application\common\models\LoginForm.php(45): common\models\LoginForm->getUser()
+#19 E:\yii-application\vendor\yiisoft\yii2\validators\InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'ssss')
+#20 E:\yii-application\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#21 E:\yii-application\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#22 E:\yii-application\common\models\LoginForm.php(59): yii\base\Model->validate()
+#23 E:\yii-application\frontend\controllers\SiteController.php(93): common\models\LoginForm->login()
+#24 [internal function]: frontend\controllers\SiteController->actionLogin()
+#25 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#27 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('login', Array)
+#28 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/login', Array)
+#29 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in E:\yii-application\vendor\yiisoft\yii2\db\Connection.php:649
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#1 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#3 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#4 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#6 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#8 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#10 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#11 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\yii-application\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\yii-application\common\models\User.php(86): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\yii-application\common\models\LoginForm.php(74): common\models\User::findByUsername('aaaa')
+#16 E:\yii-application\common\models\LoginForm.php(45): common\models\LoginForm->getUser()
+#17 E:\yii-application\vendor\yiisoft\yii2\validators\InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'ssss')
+#18 E:\yii-application\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#19 E:\yii-application\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#20 E:\yii-application\common\models\LoginForm.php(59): yii\base\Model->validate()
+#21 E:\yii-application\frontend\controllers\SiteController.php(93): common\models\LoginForm->login()
+#22 [internal function]: frontend\controllers\SiteController->actionLogin()
+#23 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#25 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('login', Array)
+#26 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/login', Array)
+#27 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#29 {main}
+Additional Information:
+
+2021-11-15 10:56:11 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'PVbWcgI7bHy6nsYe9bgyRBAWchsbABI2zXtp3flvF7V1ZKwdYE0oLsvy9nHDjloyKVkDa3g5VAX0Kz-wtytU4w=='
+    'LoginForm' => [
+        'username' => 'aaaa'
+        'password' => 'ssss'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'o75j68ngpvbfqcmrkcnghl7pe1'
+    '_csrf-frontend' => 'b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"H2zobvDRql0o66hv9Oqpc9F39PVmNDCV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '235'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://frontend-yii.local'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://frontend-yii.local/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => 'advanced-frontend=o75j68ngpvbfqcmrkcnghl7pe1; _csrf-frontend=b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22H2zobvDRql0o66hv9Oqpc9F39PVmNDCV%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '24820'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1636970171.3
+    'REQUEST_TIME' => 1636970171
+]
+2021-11-15 10:56:17 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in E:\yii-application\vendor\yiisoft\yii2\db\Connection.php:723
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(723): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#3 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#5 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#6 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#8 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#10 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#12 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#13 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\yii-application\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\yii-application\common\models\User.php(86): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\yii-application\common\models\LoginForm.php(74): common\models\User::findByUsername('aaaa')
+#18 E:\yii-application\common\models\LoginForm.php(45): common\models\LoginForm->getUser()
+#19 E:\yii-application\vendor\yiisoft\yii2\validators\InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'ssss')
+#20 E:\yii-application\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#21 E:\yii-application\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#22 E:\yii-application\common\models\LoginForm.php(59): yii\base\Model->validate()
+#23 E:\yii-application\frontend\controllers\SiteController.php(93): common\models\LoginForm->login()
+#24 [internal function]: frontend\controllers\SiteController->actionLogin()
+#25 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#27 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('login', Array)
+#28 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/login', Array)
+#29 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in E:\yii-application\vendor\yiisoft\yii2\db\Connection.php:649
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#1 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#3 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#4 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#6 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#8 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#10 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#11 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\yii-application\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\yii-application\common\models\User.php(86): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\yii-application\common\models\LoginForm.php(74): common\models\User::findByUsername('aaaa')
+#16 E:\yii-application\common\models\LoginForm.php(45): common\models\LoginForm->getUser()
+#17 E:\yii-application\vendor\yiisoft\yii2\validators\InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'ssss')
+#18 E:\yii-application\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#19 E:\yii-application\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#20 E:\yii-application\common\models\LoginForm.php(59): yii\base\Model->validate()
+#21 E:\yii-application\frontend\controllers\SiteController.php(93): common\models\LoginForm->login()
+#22 [internal function]: frontend\controllers\SiteController->actionLogin()
+#23 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#25 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('login', Array)
+#26 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/login', Array)
+#27 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#29 {main}
+Additional Information:
+
+2021-11-15 10:56:17 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'PVbWcgI7bHy6nsYe9bgyRBAWchsbABI2zXtp3flvF7V1ZKwdYE0oLsvy9nHDjloyKVkDa3g5VAX0Kz-wtytU4w=='
+    'LoginForm' => [
+        'username' => 'aaaa'
+        'password' => 'ssss'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'o75j68ngpvbfqcmrkcnghl7pe1'
+    '_csrf-frontend' => 'b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"H2zobvDRql0o66hv9Oqpc9F39PVmNDCV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '235'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://frontend-yii.local'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://frontend-yii.local/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => 'advanced-frontend=o75j68ngpvbfqcmrkcnghl7pe1; _csrf-frontend=b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22H2zobvDRql0o66hv9Oqpc9F39PVmNDCV%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '24825'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1636970177.46
+    'REQUEST_TIME' => 1636970177
+]
+2021-11-15 10:56:26 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in E:\yii-application\vendor\yiisoft\yii2\db\Connection.php:723
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(723): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#3 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#5 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#6 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#8 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#10 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#12 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#13 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\yii-application\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\yii-application\common\models\User.php(86): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\yii-application\common\models\LoginForm.php(74): common\models\User::findByUsername('aaaa')
+#18 E:\yii-application\common\models\LoginForm.php(45): common\models\LoginForm->getUser()
+#19 E:\yii-application\vendor\yiisoft\yii2\validators\InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'ssss')
+#20 E:\yii-application\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#21 E:\yii-application\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#22 E:\yii-application\common\models\LoginForm.php(59): yii\base\Model->validate()
+#23 E:\yii-application\frontend\controllers\SiteController.php(93): common\models\LoginForm->login()
+#24 [internal function]: frontend\controllers\SiteController->actionLogin()
+#25 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#27 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('login', Array)
+#28 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/login', Array)
+#29 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in E:\yii-application\vendor\yiisoft\yii2\db\Connection.php:649
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#1 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#3 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#4 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#6 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#8 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#10 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#11 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\yii-application\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\yii-application\common\models\User.php(86): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\yii-application\common\models\LoginForm.php(74): common\models\User::findByUsername('aaaa')
+#16 E:\yii-application\common\models\LoginForm.php(45): common\models\LoginForm->getUser()
+#17 E:\yii-application\vendor\yiisoft\yii2\validators\InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'ssss')
+#18 E:\yii-application\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#19 E:\yii-application\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#20 E:\yii-application\common\models\LoginForm.php(59): yii\base\Model->validate()
+#21 E:\yii-application\frontend\controllers\SiteController.php(93): common\models\LoginForm->login()
+#22 [internal function]: frontend\controllers\SiteController->actionLogin()
+#23 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#25 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('login', Array)
+#26 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/login', Array)
+#27 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#29 {main}
+Additional Information:
+
+2021-11-15 10:56:26 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'PVbWcgI7bHy6nsYe9bgyRBAWchsbABI2zXtp3flvF7V1ZKwdYE0oLsvy9nHDjloyKVkDa3g5VAX0Kz-wtytU4w=='
+    'LoginForm' => [
+        'username' => 'aaaa'
+        'password' => 'ssss'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'o75j68ngpvbfqcmrkcnghl7pe1'
+    '_csrf-frontend' => 'b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"H2zobvDRql0o66hv9Oqpc9F39PVmNDCV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '235'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://frontend-yii.local'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://frontend-yii.local/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => 'advanced-frontend=o75j68ngpvbfqcmrkcnghl7pe1; _csrf-frontend=b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22H2zobvDRql0o66hv9Oqpc9F39PVmNDCV%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '24832'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1636970186.379
+    'REQUEST_TIME' => 1636970186
+]
+2021-11-15 10:58:29 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in E:\yii-application\vendor\yiisoft\yii2\db\Connection.php:723
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(723): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#3 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#5 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#6 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#8 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#10 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#12 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#13 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\yii-application\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\yii-application\common\models\User.php(86): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\yii-application\common\models\LoginForm.php(74): common\models\User::findByUsername('aaaa')
+#18 E:\yii-application\common\models\LoginForm.php(45): common\models\LoginForm->getUser()
+#19 E:\yii-application\vendor\yiisoft\yii2\validators\InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'asas')
+#20 E:\yii-application\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#21 E:\yii-application\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#22 E:\yii-application\common\models\LoginForm.php(59): yii\base\Model->validate()
+#23 E:\yii-application\frontend\controllers\SiteController.php(93): common\models\LoginForm->login()
+#24 [internal function]: frontend\controllers\SiteController->actionLogin()
+#25 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#27 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('login', Array)
+#28 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/login', Array)
+#29 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in E:\yii-application\vendor\yiisoft\yii2\db\Connection.php:649
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#1 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#3 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#4 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#6 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#8 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#10 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#11 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\yii-application\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\yii-application\common\models\User.php(86): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\yii-application\common\models\LoginForm.php(74): common\models\User::findByUsername('aaaa')
+#16 E:\yii-application\common\models\LoginForm.php(45): common\models\LoginForm->getUser()
+#17 E:\yii-application\vendor\yiisoft\yii2\validators\InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'asas')
+#18 E:\yii-application\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#19 E:\yii-application\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#20 E:\yii-application\common\models\LoginForm.php(59): yii\base\Model->validate()
+#21 E:\yii-application\frontend\controllers\SiteController.php(93): common\models\LoginForm->login()
+#22 [internal function]: frontend\controllers\SiteController->actionLogin()
+#23 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#25 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('login', Array)
+#26 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/login', Array)
+#27 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#29 {main}
+Additional Information:
+
+2021-11-15 10:58:29 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'pyAGQleqaxlwSAZmSUfq0XxDvK908hhth_pvhwmWD5vvEnwtNdwvSwEkNgl_cYKnRQzN3xfLXl6-qjnqR9JMzQ=='
+    'LoginForm' => [
+        'username' => 'aaaa'
+        'password' => 'asas'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'o75j68ngpvbfqcmrkcnghl7pe1'
+    '_csrf-frontend' => 'b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"H2zobvDRql0o66hv9Oqpc9F39PVmNDCV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '235'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://frontend-yii.local'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://frontend-yii.local/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => 'advanced-frontend=o75j68ngpvbfqcmrkcnghl7pe1; _csrf-frontend=b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22H2zobvDRql0o66hv9Oqpc9F39PVmNDCV%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '24896'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1636970309.798
+    'REQUEST_TIME' => 1636970309
+]
+2021-11-15 10:59:43 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in E:\yii-application\vendor\yiisoft\yii2\db\Connection.php:723
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(723): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#3 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#5 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#6 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#8 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#10 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#11 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#12 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#13 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#14 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#15 E:\yii-application\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#16 E:\yii-application\common\models\User.php(86): yii\db\BaseActiveRecord::findOne(Array)
+#17 E:\yii-application\common\models\LoginForm.php(74): common\models\User::findByUsername('dsadasd')
+#18 E:\yii-application\common\models\LoginForm.php(45): common\models\LoginForm->getUser()
+#19 E:\yii-application\vendor\yiisoft\yii2\validators\InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'asdasdasd')
+#20 E:\yii-application\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#21 E:\yii-application\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#22 E:\yii-application\common\models\LoginForm.php(59): yii\base\Model->validate()
+#23 E:\yii-application\frontend\controllers\SiteController.php(93): common\models\LoginForm->login()
+#24 [internal function]: frontend\controllers\SiteController->actionLogin()
+#25 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#26 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#27 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('login', Array)
+#28 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/login', Array)
+#29 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#31 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in E:\yii-application\vendor\yiisoft\yii2\db\Connection.php:649
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#1 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#3 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#4 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#6 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#8 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%user}}', 'schema', false)
+#9 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('{{%user}}')
+#10 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#11 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#12 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#13 E:\yii-application\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#14 E:\yii-application\common\models\User.php(86): yii\db\BaseActiveRecord::findOne(Array)
+#15 E:\yii-application\common\models\LoginForm.php(74): common\models\User::findByUsername('dsadasd')
+#16 E:\yii-application\common\models\LoginForm.php(45): common\models\LoginForm->getUser()
+#17 E:\yii-application\vendor\yiisoft\yii2\validators\InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'asdasdasd')
+#18 E:\yii-application\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#19 E:\yii-application\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#20 E:\yii-application\common\models\LoginForm.php(59): yii\base\Model->validate()
+#21 E:\yii-application\frontend\controllers\SiteController.php(93): common\models\LoginForm->login()
+#22 [internal function]: frontend\controllers\SiteController->actionLogin()
+#23 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#24 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#25 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('login', Array)
+#26 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/login', Array)
+#27 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#29 {main}
+Additional Information:
+
+2021-11-15 10:59:43 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'D2c-g4CM83HiAz4GZRJMNxYyPY5Ghd5dooAwyuGyMi9HVUTs4vq3I5NvDmlTJCRBL31M_iW8mG6b0Ganr_ZxeQ=='
+    'LoginForm' => [
+        'username' => 'dsadasd'
+        'password' => 'asdasdasd'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'o75j68ngpvbfqcmrkcnghl7pe1'
+    '_csrf-frontend' => 'b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"H2zobvDRql0o66hv9Oqpc9F39PVmNDCV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '243'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://frontend-yii.local'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://frontend-yii.local/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => 'advanced-frontend=o75j68ngpvbfqcmrkcnghl7pe1; _csrf-frontend=b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22H2zobvDRql0o66hv9Oqpc9F39PVmNDCV%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '24906'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1636970383.514
+    'REQUEST_TIME' => 1636970383
+]
+2021-11-15 11:00:35 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The table does not exist: {{%user}} in E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php:438
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(262): yii\db\ActiveRecord::getTableSchema()
+#1 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(234): yii\db\ActiveRecord::filterValidColumnNames(Object(yii\db\Connection), Array)
+#2 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(191): yii\db\ActiveRecord::filterCondition(Array, Array)
+#3 E:\yii-application\vendor\yiisoft\yii2\db\BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition(Array)
+#4 E:\yii-application\common\models\User.php(86): yii\db\BaseActiveRecord::findOne(Array)
+#5 E:\yii-application\common\models\LoginForm.php(74): common\models\User::findByUsername('dsadasd')
+#6 E:\yii-application\common\models\LoginForm.php(45): common\models\LoginForm->getUser()
+#7 E:\yii-application\vendor\yiisoft\yii2\validators\InlineValidator.php(84): common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator), 'asdasdasd')
+#8 E:\yii-application\vendor\yiisoft\yii2\validators\Validator.php(261): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#9 E:\yii-application\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#10 E:\yii-application\common\models\LoginForm.php(59): yii\base\Model->validate()
+#11 E:\yii-application\frontend\controllers\SiteController.php(93): common\models\LoginForm->login()
+#12 [internal function]: frontend\controllers\SiteController->actionLogin()
+#13 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#15 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('login', Array)
+#16 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('site/login', Array)
+#17 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#19 {main}
+2021-11-15 11:00:35 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'D2c-g4CM83HiAz4GZRJMNxYyPY5Ghd5dooAwyuGyMi9HVUTs4vq3I5NvDmlTJCRBL31M_iW8mG6b0Ganr_ZxeQ=='
+    'LoginForm' => [
+        'username' => 'dsadasd'
+        'password' => 'asdasdasd'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'o75j68ngpvbfqcmrkcnghl7pe1'
+    '_csrf-frontend' => 'b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"H2zobvDRql0o66hv9Oqpc9F39PVmNDCV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '243'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://frontend-yii.local'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://frontend-yii.local/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => 'advanced-frontend=o75j68ngpvbfqcmrkcnghl7pe1; _csrf-frontend=b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22H2zobvDRql0o66hv9Oqpc9F39PVmNDCV%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '24997'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1636970435.781
+    'REQUEST_TIME' => 1636970435
+]
+2021-11-15 11:14:53 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'tablePrefix' of non-object in E:\yii-application\vendor\yiisoft\yii2-gii\src\generators\model\Generator.php:1015
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2-gii\src\generators\model\Generator.php(1015): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', 'E:\\yii-applicat...', 1015, Array)
+#1 E:\yii-application\vendor\yiisoft\yii2-gii\src\generators\model\Generator.php(1054): yii\gii\generators\model\Generator->generateClassName('user')
+#2 E:\yii-application\vendor\yiisoft\yii2-gii\src\controllers\DefaultController.php(121): yii\gii\generators\model\Generator->actionGenerateClassName()
+#3 [internal function]: yii\gii\controllers\DefaultController->actionAction('model', 'GenerateClassNa...')
+#4 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#6 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('action', Array)
+#7 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('gii/default/act...', Array)
+#8 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2021-11-15 11:14:53 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][info][application] $_GET = [
+    'r' => 'gii/default/action'
+    'id' => 'model'
+    'name' => 'GenerateClassName'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'axeLKjkegp5VPkr1iXGO2nCP11-gwgO2cDROErxM2X4jJfFFW2jGzCRSepq_R-asScCmL8P7RYVJZBh_8giaKA=='
+    'Generator' => [
+        'db' => 'yii2advanced'
+        'useTablePrefix' => '0'
+        'useSchemaName' => '1'
+        'tableName' => 'user'
+        'standardizeCapitals' => '0'
+        'singularize' => '0'
+        'modelClass' => ''
+        'ns' => 'app\\models'
+        'baseClass' => 'yii\\db\\ActiveRecord'
+        'generateRelations' => 'all'
+        'generateJunctionRelationMode' => 'table'
+        'generateRelationsFromCurrentSchema' => '1'
+        'generateLabelsFromComments' => '0'
+        'generateQuery' => '0'
+        'queryNs' => 'app\\models'
+        'queryBaseClass' => 'yii\\db\\ActiveQuery'
+        'enableI18N' => '0'
+        'messageCategory' => 'app'
+        'template' => 'default'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'o75j68ngpvbfqcmrkcnghl7pe1'
+    '_csrf-frontend' => 'b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"H2zobvDRql0o66hv9Oqpc9F39PVmNDCV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '885'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_CSRF_TOKEN' => 'axeLKjkegp5VPkr1iXGO2nCP11-gwgO2cDROErxM2X4jJfFFW2jGzCRSepq_R-asScCmL8P7RYVJZBh_8giaKA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://frontend-yii.local'
+    'HTTP_REFERER' => 'http://frontend-yii.local/index.php?r=gii%2Fdefault%2Fview&id=model'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => 'advanced-frontend=o75j68ngpvbfqcmrkcnghl7pe1; _csrf-frontend=b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22H2zobvDRql0o66hv9Oqpc9F39PVmNDCV%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '25446'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=gii%2Fdefault%2Faction&id=model&name=GenerateClassName'
+    'REQUEST_URI' => '/index.php?r=gii%2Fdefault%2Faction&id=model&name=GenerateClassName'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1636971293.307
+    'REQUEST_TIME' => 1636971293
+]
+2021-11-15 11:15:05 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'tablePrefix' of non-object in E:\yii-application\vendor\yiisoft\yii2-gii\src\generators\model\Generator.php:1015
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2-gii\src\generators\model\Generator.php(1015): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', 'E:\\yii-applicat...', 1015, Array)
+#1 E:\yii-application\vendor\yiisoft\yii2-gii\src\generators\model\Generator.php(1054): yii\gii\generators\model\Generator->generateClassName('user')
+#2 E:\yii-application\vendor\yiisoft\yii2-gii\src\controllers\DefaultController.php(121): yii\gii\generators\model\Generator->actionGenerateClassName()
+#3 [internal function]: yii\gii\controllers\DefaultController->actionAction('model', 'GenerateClassNa...')
+#4 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#6 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('action', Array)
+#7 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('gii/default/act...', Array)
+#8 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2021-11-15 11:15:05 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][info][application] $_GET = [
+    'r' => 'gii/default/action'
+    'id' => 'model'
+    'name' => 'GenerateClassName'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'axeLKjkegp5VPkr1iXGO2nCP11-gwgO2cDROErxM2X4jJfFFW2jGzCRSepq_R-asScCmL8P7RYVJZBh_8giaKA=='
+    'Generator' => [
+        'db' => 'yii2advanced'
+        'useTablePrefix' => '1'
+        'useSchemaName' => '1'
+        'tableName' => 'user'
+        'standardizeCapitals' => '0'
+        'singularize' => '0'
+        'modelClass' => ''
+        'ns' => 'app\\models'
+        'baseClass' => 'yii\\db\\ActiveRecord'
+        'generateRelations' => 'all'
+        'generateJunctionRelationMode' => 'table'
+        'generateRelationsFromCurrentSchema' => '1'
+        'generateLabelsFromComments' => '0'
+        'generateQuery' => '0'
+        'queryNs' => 'app\\models'
+        'queryBaseClass' => 'yii\\db\\ActiveQuery'
+        'enableI18N' => '0'
+        'messageCategory' => 'app'
+        'template' => 'default'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'o75j68ngpvbfqcmrkcnghl7pe1'
+    '_csrf-frontend' => 'b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"H2zobvDRql0o66hv9Oqpc9F39PVmNDCV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '917'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_CSRF_TOKEN' => 'axeLKjkegp5VPkr1iXGO2nCP11-gwgO2cDROErxM2X4jJfFFW2jGzCRSepq_R-asScCmL8P7RYVJZBh_8giaKA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://frontend-yii.local'
+    'HTTP_REFERER' => 'http://frontend-yii.local/index.php?r=gii%2Fdefault%2Fview&id=model'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => 'advanced-frontend=o75j68ngpvbfqcmrkcnghl7pe1; _csrf-frontend=b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22H2zobvDRql0o66hv9Oqpc9F39PVmNDCV%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '25481'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=gii%2Fdefault%2Faction&id=model&name=GenerateClassName'
+    'REQUEST_URI' => '/index.php?r=gii%2Fdefault%2Faction&id=model&name=GenerateClassName'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1636971305.223
+    'REQUEST_TIME' => 1636971305
+]
+2021-11-15 11:15:21 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'tablePrefix' of non-object in E:\yii-application\vendor\yiisoft\yii2-gii\src\generators\model\Generator.php:1015
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2-gii\src\generators\model\Generator.php(1015): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', 'E:\\yii-applicat...', 1015, Array)
+#1 E:\yii-application\vendor\yiisoft\yii2-gii\src\generators\model\Generator.php(1054): yii\gii\generators\model\Generator->generateClassName('user')
+#2 E:\yii-application\vendor\yiisoft\yii2-gii\src\controllers\DefaultController.php(121): yii\gii\generators\model\Generator->actionGenerateClassName()
+#3 [internal function]: yii\gii\controllers\DefaultController->actionAction('model', 'GenerateClassNa...')
+#4 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#6 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('action', Array)
+#7 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('gii/default/act...', Array)
+#8 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2021-11-15 11:15:21 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][info][application] $_GET = [
+    'r' => 'gii/default/action'
+    'id' => 'model'
+    'name' => 'GenerateClassName'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'axeLKjkegp5VPkr1iXGO2nCP11-gwgO2cDROErxM2X4jJfFFW2jGzCRSepq_R-asScCmL8P7RYVJZBh_8giaKA=='
+    'Generator' => [
+        'db' => 'yii2advanced'
+        'useTablePrefix' => '1'
+        'useSchemaName' => '1'
+        'tableName' => 'user'
+        'standardizeCapitals' => '0'
+        'singularize' => '0'
+        'modelClass' => ''
+        'ns' => 'app\\models'
+        'baseClass' => 'yii\\db\\ActiveRecord'
+        'generateRelations' => 'all'
+        'generateJunctionRelationMode' => 'table'
+        'generateRelationsFromCurrentSchema' => '1'
+        'generateLabelsFromComments' => '0'
+        'generateQuery' => '0'
+        'queryNs' => 'app\\models'
+        'queryBaseClass' => 'yii\\db\\ActiveQuery'
+        'enableI18N' => '0'
+        'messageCategory' => 'app'
+        'template' => 'default'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'o75j68ngpvbfqcmrkcnghl7pe1'
+    '_csrf-frontend' => 'b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"H2zobvDRql0o66hv9Oqpc9F39PVmNDCV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '917'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_CSRF_TOKEN' => 'axeLKjkegp5VPkr1iXGO2nCP11-gwgO2cDROErxM2X4jJfFFW2jGzCRSepq_R-asScCmL8P7RYVJZBh_8giaKA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://frontend-yii.local'
+    'HTTP_REFERER' => 'http://frontend-yii.local/index.php?r=gii%2Fdefault%2Fview&id=model'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => 'advanced-frontend=o75j68ngpvbfqcmrkcnghl7pe1; _csrf-frontend=b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22H2zobvDRql0o66hv9Oqpc9F39PVmNDCV%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '25490'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=gii%2Fdefault%2Faction&id=model&name=GenerateClassName'
+    'REQUEST_URI' => '/index.php?r=gii%2Fdefault%2Faction&id=model&name=GenerateClassName'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1636971321.077
+    'REQUEST_TIME' => 1636971321
+]
+2021-11-15 11:32:59 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'frontend\controllers\UserController' in file: E:\yii-application/frontend/controllers/UserController.php. Namespace missing? in E:\yii-application\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\contro...')
+#1 [internal function]: spl_autoload_call('frontend\\contro...')
+#2 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(643): class_exists('frontend\\contro...')
+#3 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(602): yii\base\Module->createControllerByID('user')
+#4 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Module->createController('index')
+#5 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('user/index', Array)
+#6 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2021-11-15 11:32:59 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'o75j68ngpvbfqcmrkcnghl7pe1'
+    '_csrf-frontend' => 'b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"H2zobvDRql0o66hv9Oqpc9F39PVmNDCV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => 'advanced-frontend=o75j68ngpvbfqcmrkcnghl7pe1; _csrf-frontend=b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22H2zobvDRql0o66hv9Oqpc9F39PVmNDCV%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '26106'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Findex'
+    'REQUEST_URI' => '/index.php?r=user%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1636972379.638
+    'REQUEST_TIME' => 1636972379
+]
+2021-11-15 11:33:12 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "usermodel/index". in E:\yii-application\vendor\yiisoft\yii2\base\Module.php:543
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('usermodel/index', Array)
+#1 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\yii-application\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2021-11-15 11:33:12 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][info][application] $_GET = [
+    'r' => 'usermodel/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'o75j68ngpvbfqcmrkcnghl7pe1'
+    '_csrf-frontend' => 'b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"H2zobvDRql0o66hv9Oqpc9F39PVmNDCV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => 'advanced-frontend=o75j68ngpvbfqcmrkcnghl7pe1; _csrf-frontend=b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22H2zobvDRql0o66hv9Oqpc9F39PVmNDCV%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '26107'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=usermodel%2Findex'
+    'REQUEST_URI' => '/index.php?r=usermodel%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1636972392.005
+    'REQUEST_TIME' => 1636972392
+]
+2021-11-15 11:33:20 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "usermodel". in E:\yii-application\vendor\yiisoft\yii2\base\Module.php:543
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('usermodel', Array)
+#1 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\yii-application\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2021-11-15 11:33:20 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][info][application] $_GET = [
+    'r' => 'usermodel'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'o75j68ngpvbfqcmrkcnghl7pe1'
+    '_csrf-frontend' => 'b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"H2zobvDRql0o66hv9Oqpc9F39PVmNDCV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => 'advanced-frontend=o75j68ngpvbfqcmrkcnghl7pe1; _csrf-frontend=b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22H2zobvDRql0o66hv9Oqpc9F39PVmNDCV%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '26113'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=usermodel'
+    'REQUEST_URI' => '/index.php?r=usermodel'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1636972400.853
+    'REQUEST_TIME' => 1636972400
+]
+2021-11-15 11:34:12 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "usermodel/index". in E:\yii-application\vendor\yiisoft\yii2\base\Module.php:543
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('usermodel/index', Array)
+#1 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\yii-application\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2021-11-15 11:34:12 [127.0.0.1][-][o75j68ngpvbfqcmrkcnghl7pe1][info][application] $_GET = [
+    'r' => 'usermodel/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'o75j68ngpvbfqcmrkcnghl7pe1'
+    '_csrf-frontend' => 'b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"H2zobvDRql0o66hv9Oqpc9F39PVmNDCV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => 'advanced-frontend=o75j68ngpvbfqcmrkcnghl7pe1; _csrf-frontend=b8ad7412555eced6438bd856a5b671f6c2840a4129532c704c308dd3fcd7c599a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22H2zobvDRql0o66hv9Oqpc9F39PVmNDCV%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '26118'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=usermodel%2Findex'
+    'REQUEST_URI' => '/index.php?r=usermodel%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1636972452.559
+    'REQUEST_TIME' => 1636972452
+]
+2021-11-16 03:08:14 [127.0.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'frontend\controllers\UserController' in file: E:\yii-application/frontend/controllers/UserController.php. Namespace missing? in E:\yii-application\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\contro...')
+#1 [internal function]: spl_autoload_call('frontend\\contro...')
+#2 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(643): class_exists('frontend\\contro...')
+#3 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(602): yii\base\Module->createControllerByID('user')
+#4 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Module->createController('index')
+#5 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('user/index', Array)
+#6 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2021-11-16 03:08:14 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '527f29af69e43847e25ede8052979266c9f276f213209f4331ab31deba93bd10a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"YfC9Xz6uQ-Mt2u2NISM41v8urzHJaQ4_\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_csrf-frontend=527f29af69e43847e25ede8052979266c9f276f213209f4331ab31deba93bd10a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22YfC9Xz6uQ-Mt2u2NISM41v8urzHJaQ4_%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\GitHubDesktop\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '1232'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Findex'
+    'REQUEST_URI' => '/index.php?r=user%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1637028494.103
+    'REQUEST_TIME' => 1637028494
+]
+2021-11-16 03:08:46 [127.0.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'frontend\controllers\UserController' in file: E:\yii-application/frontend/controllers/UserController.php. Namespace missing? in E:\yii-application\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\contro...')
+#1 [internal function]: spl_autoload_call('frontend\\contro...')
+#2 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(643): class_exists('frontend\\contro...')
+#3 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(602): yii\base\Module->createControllerByID('user')
+#4 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Module->createController('')
+#5 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('user', Array)
+#6 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2021-11-16 03:08:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '527f29af69e43847e25ede8052979266c9f276f213209f4331ab31deba93bd10a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"YfC9Xz6uQ-Mt2u2NISM41v8urzHJaQ4_\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_csrf-frontend=527f29af69e43847e25ede8052979266c9f276f213209f4331ab31deba93bd10a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22YfC9Xz6uQ-Mt2u2NISM41v8urzHJaQ4_%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\GitHubDesktop\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '1234'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user'
+    'REQUEST_URI' => '/index.php?r=user'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1637028526.874
+    'REQUEST_TIME' => 1637028526
+]
+2021-11-16 03:14:30 [127.0.0.1][-][-][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: E:\yii-application\frontend\views\user\index.php in E:\yii-application\vendor\yiisoft\yii2\base\View.php:233
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('E:\\yii-applicat...', Array, Object(frontend\controllers\UserController))
+#1 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(410): yii\base\View->render('index', Array, Object(frontend\controllers\UserController))
+#2 E:\yii-application\frontend\controllers\UserController.php(45): yii\base\Controller->render('index', Array)
+#3 [internal function]: frontend\controllers\UserController->actionIndex()
+#4 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#6 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('', Array)
+#7 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('user', Array)
+#8 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2021-11-16 03:14:30 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '527f29af69e43847e25ede8052979266c9f276f213209f4331ab31deba93bd10a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"YfC9Xz6uQ-Mt2u2NISM41v8urzHJaQ4_\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_csrf-frontend=527f29af69e43847e25ede8052979266c9f276f213209f4331ab31deba93bd10a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22YfC9Xz6uQ-Mt2u2NISM41v8urzHJaQ4_%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\GitHubDesktop\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '1272'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user'
+    'REQUEST_URI' => '/index.php?r=user'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1637028870.029
+    'REQUEST_TIME' => 1637028870
+]
+2021-11-16 03:16:46 [127.0.0.1][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'frontend\controllers\UserController' in file: E:\yii-application/frontend/controllers/UserController.php. Namespace missing? in E:\yii-application\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\contro...')
+#1 [internal function]: spl_autoload_call('frontend\\contro...')
+#2 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(643): class_exists('frontend\\contro...')
+#3 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(602): yii\base\Module->createControllerByID('user')
+#4 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Module->createController('')
+#5 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('user', Array)
+#6 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2021-11-16 03:16:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '527f29af69e43847e25ede8052979266c9f276f213209f4331ab31deba93bd10a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"YfC9Xz6uQ-Mt2u2NISM41v8urzHJaQ4_\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_csrf-frontend=527f29af69e43847e25ede8052979266c9f276f213209f4331ab31deba93bd10a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22YfC9Xz6uQ-Mt2u2NISM41v8urzHJaQ4_%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\GitHubDesktop\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '1276'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user'
+    'REQUEST_URI' => '/index.php?r=user'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1637029006.527
+    'REQUEST_TIME' => 1637029006
+]
+2021-11-16 03:17:08 [127.0.0.1][-][-][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: E:\yii-application\frontend\views\user\index.php in E:\yii-application\vendor\yiisoft\yii2\base\View.php:233
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('E:\\yii-applicat...', Array, Object(frontend\controllers\UserController))
+#1 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(410): yii\base\View->render('index', Array, Object(frontend\controllers\UserController))
+#2 E:\yii-application\frontend\controllers\UserController.php(45): yii\base\Controller->render('index', Array)
+#3 [internal function]: frontend\controllers\UserController->actionIndex()
+#4 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#6 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('', Array)
+#7 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('user', Array)
+#8 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2021-11-16 03:17:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '527f29af69e43847e25ede8052979266c9f276f213209f4331ab31deba93bd10a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"YfC9Xz6uQ-Mt2u2NISM41v8urzHJaQ4_\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_csrf-frontend=527f29af69e43847e25ede8052979266c9f276f213209f4331ab31deba93bd10a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22YfC9Xz6uQ-Mt2u2NISM41v8urzHJaQ4_%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\GitHubDesktop\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '1277'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user'
+    'REQUEST_URI' => '/index.php?r=user'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1637029028.45
+    'REQUEST_TIME' => 1637029028
+]
+2021-11-17 05:58:34 [127.0.0.1][-][imilsdvoi420u3u5mqn57ko1d3][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: user/index.html in E:\yii-application\vendor\yiisoft\yii2\base\Controller.php:152
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('index.html', Array)
+#1 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('user/index.html', Array)
+#2 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\yii-application\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2021-11-17 05:58:34 [127.0.0.1][-][imilsdvoi420u3u5mqn57ko1d3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '527f29af69e43847e25ede8052979266c9f276f213209f4331ab31deba93bd10a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"YfC9Xz6uQ-Mt2u2NISM41v8urzHJaQ4_\";}'
+    'advanced-frontend' => 'imilsdvoi420u3u5mqn57ko1d3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nukaqa'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_csrf-frontend=527f29af69e43847e25ede8052979266c9f276f213209f4331ab31deba93bd10a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22YfC9Xz6uQ-Mt2u2NISM41v8urzHJaQ4_%22%3B%7D; advanced-frontend=imilsdvoi420u3u5mqn57ko1d3'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\GitHubDesktop\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '29752'
+    'REDIRECT_URL' => '/user/index.html'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/user/index.html'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1637125114.343
+    'REQUEST_TIME' => 1637125114
+]
+2021-11-18 03:58:02 [127.0.0.1][-][imilsdvoi420u3u5mqn57ko1d3][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in E:\yii-application\vendor\yiisoft\yii2\db\Connection.php:723
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(723): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(638): yii\db\Connection->createPdoInstance()
+#2 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#3 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#4 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#5 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#6 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#8 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#10 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#11 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('user')
+#12 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#13 E:\yii-application\vendor\yiisoft\yii2\db\BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#14 E:\yii-application\vendor\yiisoft\yii2\db\BaseActiveRecord.php(291): yii\db\BaseActiveRecord->hasAttribute('id')
+#15 E:\yii-application\vendor\yiisoft\yii2\validators\Validator.php(258): yii\db\BaseActiveRecord->__get('id')
+#16 E:\yii-application\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\UserSearch), Array)
+#17 E:\yii-application\frontend\models\UserSearch.php(53): yii\base\Model->validate()
+#18 E:\yii-application\frontend\controllers\UserController.php(41): app\models\UserSearch->search(Array)
+#19 [internal function]: frontend\controllers\UserController->actionIndex()
+#20 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#21 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#22 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('', Array)
+#23 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('user', Array)
+#24 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#26 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in E:\yii-application\vendor\yiisoft\yii2\db\Connection.php:649
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1063): yii\db\Connection->open()
+#1 E:\yii-application\vendor\yiisoft\yii2\db\Connection.php(1050): yii\db\Connection->getMasterPdo()
+#2 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(261): yii\db\Connection->getSlavePdo()
+#3 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(1163): yii\db\Command->prepare(true)
+#4 E:\yii-application\vendor\yiisoft\yii2\db\Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(319): yii\db\Command->queryAll()
+#6 E:\yii-application\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(758): yii\db\mysql\Schema->loadTableSchema('user')
+#8 E:\yii-application\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('user', 'schema', false)
+#9 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(435): yii\db\Schema->getTableSchema('user')
+#10 E:\yii-application\vendor\yiisoft\yii2\db\ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#11 E:\yii-application\vendor\yiisoft\yii2\db\BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#12 E:\yii-application\vendor\yiisoft\yii2\db\BaseActiveRecord.php(291): yii\db\BaseActiveRecord->hasAttribute('id')
+#13 E:\yii-application\vendor\yiisoft\yii2\validators\Validator.php(258): yii\db\BaseActiveRecord->__get('id')
+#14 E:\yii-application\vendor\yiisoft\yii2\base\Model.php(368): yii\validators\Validator->validateAttributes(Object(app\models\UserSearch), Array)
+#15 E:\yii-application\frontend\models\UserSearch.php(53): yii\base\Model->validate()
+#16 E:\yii-application\frontend\controllers\UserController.php(41): app\models\UserSearch->search(Array)
+#17 [internal function]: frontend\controllers\UserController->actionIndex()
+#18 E:\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#19 E:\yii-application\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#20 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('', Array)
+#21 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('user', Array)
+#22 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#24 {main}
+Additional Information:
+
+2021-11-18 03:57:58 [127.0.0.1][-][imilsdvoi420u3u5mqn57ko1d3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '527f29af69e43847e25ede8052979266c9f276f213209f4331ab31deba93bd10a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"YfC9Xz6uQ-Mt2u2NISM41v8urzHJaQ4_\";}'
+    'advanced-frontend' => 'imilsdvoi420u3u5mqn57ko1d3'
+    'CMSMOBICLIP' => 'fmisbdmkqfk45rs3th76nna100'
+    '_csrf' => 'e4d1be17550bc1c38a84518eb5be873784b27d805f001b61393f265d399828c8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"jvF0I4LuLrFwtUBojF_E5TQAwEyu3ePC\";}'
+    'advanced-backend' => 'e8t8d8s4413mqlu05tkb1mnjng'
+    '_csrf-backend' => '24a93d2c75c0f978873c6784e66a977a4dc1886081e7c7c3746a990890ff4e29a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"wslFLM8a1x02Beh7CdW-XubKr2yhen2a\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nukaqa'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_csrf-frontend=527f29af69e43847e25ede8052979266c9f276f213209f4331ab31deba93bd10a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22YfC9Xz6uQ-Mt2u2NISM41v8urzHJaQ4_%22%3B%7D; advanced-frontend=imilsdvoi420u3u5mqn57ko1d3; CMSMOBICLIP=fmisbdmkqfk45rs3th76nna100; _csrf=e4d1be17550bc1c38a84518eb5be873784b27d805f001b61393f265d399828c8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22jvF0I4LuLrFwtUBojF_E5TQAwEyu3ePC%22%3B%7D; advanced-backend=e8t8d8s4413mqlu05tkb1mnjng; _csrf-backend=24a93d2c75c0f978873c6784e66a977a4dc1886081e7c7c3746a990890ff4e29a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22wslFLM8a1x02Beh7CdW-XubKr2yhen2a%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\GitHubDesktop\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '1887'
+    'REDIRECT_URL' => '/user'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/user'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1637204278.391
+    'REQUEST_TIME' => 1637204278
+]
+2021-11-19 03:41:26 [127.0.0.1][-][imilsdvoi420u3u5mqn57ko1d3][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "user". in E:\yii-application\vendor\yiisoft\yii2\base\Module.php:543
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('user', Array)
+#1 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\yii-application\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2021-11-19 03:41:25 [127.0.0.1][-][imilsdvoi420u3u5mqn57ko1d3][info][application] $_GET = [
+    'UserSearch' => [
+        'id' => ''
+        'name' => ''
+    ]
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '527f29af69e43847e25ede8052979266c9f276f213209f4331ab31deba93bd10a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"YfC9Xz6uQ-Mt2u2NISM41v8urzHJaQ4_\";}'
+    'advanced-frontend' => 'imilsdvoi420u3u5mqn57ko1d3'
+    'CMSMOBICLIP' => 'fmisbdmkqfk45rs3th76nna100'
+    '_csrf' => 'e4d1be17550bc1c38a84518eb5be873784b27d805f001b61393f265d399828c8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"jvF0I4LuLrFwtUBojF_E5TQAwEyu3ePC\";}'
+    'advanced-backend' => 'e8t8d8s4413mqlu05tkb1mnjng'
+    '_csrf-backend' => '24a93d2c75c0f978873c6784e66a977a4dc1886081e7c7c3746a990890ff4e29a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"wslFLM8a1x02Beh7CdW-XubKr2yhen2a\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nukaqa'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://frontend-yii.local/user?UserSearch%5Bid%5D=3&UserSearch%5Bname%5D='
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_csrf-frontend=527f29af69e43847e25ede8052979266c9f276f213209f4331ab31deba93bd10a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22YfC9Xz6uQ-Mt2u2NISM41v8urzHJaQ4_%22%3B%7D; advanced-frontend=imilsdvoi420u3u5mqn57ko1d3; CMSMOBICLIP=fmisbdmkqfk45rs3th76nna100; _csrf=e4d1be17550bc1c38a84518eb5be873784b27d805f001b61393f265d399828c8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22jvF0I4LuLrFwtUBojF_E5TQAwEyu3ePC%22%3B%7D; advanced-backend=e8t8d8s4413mqlu05tkb1mnjng; _csrf-backend=24a93d2c75c0f978873c6784e66a977a4dc1886081e7c7c3746a990890ff4e29a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22wslFLM8a1x02Beh7CdW-XubKr2yhen2a%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\GitHubDesktop\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '26287'
+    'REDIRECT_URL' => '/user'
+    'REDIRECT_QUERY_STRING' => 'UserSearch%5Bid%5D=&UserSearch%5Bname%5D='
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'UserSearch%5Bid%5D=&UserSearch%5Bname%5D='
+    'REQUEST_URI' => '/user?UserSearch%5Bid%5D=&UserSearch%5Bname%5D='
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1637289685.122
+    'REQUEST_TIME' => 1637289685
+]
+2021-11-19 03:47:49 [127.0.0.1][-][imilsdvoi420u3u5mqn57ko1d3][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'frontend\controllers\UserController' in file: E:\yii-application/frontend/controllers/UserController.php. Namespace missing? in E:\yii-application\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\\contro...')
+#1 [internal function]: spl_autoload_call('frontend\\contro...')
+#2 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(643): class_exists('frontend\\contro...')
+#3 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(602): yii\base\Module->createControllerByID('user')
+#4 E:\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Module->createController('')
+#5 E:\yii-application\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('user', Array)
+#6 E:\yii-application\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\yii-application\frontend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2021-11-19 03:47:49 [127.0.0.1][-][imilsdvoi420u3u5mqn57ko1d3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-frontend' => '527f29af69e43847e25ede8052979266c9f276f213209f4331ab31deba93bd10a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"YfC9Xz6uQ-Mt2u2NISM41v8urzHJaQ4_\";}'
+    'advanced-frontend' => 'imilsdvoi420u3u5mqn57ko1d3'
+    'CMSMOBICLIP' => 'fmisbdmkqfk45rs3th76nna100'
+    '_csrf' => 'e4d1be17550bc1c38a84518eb5be873784b27d805f001b61393f265d399828c8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"jvF0I4LuLrFwtUBojF_E5TQAwEyu3ePC\";}'
+    'advanced-backend' => 'e8t8d8s4413mqlu05tkb1mnjng'
+    '_csrf-backend' => '24a93d2c75c0f978873c6784e66a977a4dc1886081e7c7c3746a990890ff4e29a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"wslFLM8a1x02Beh7CdW-XubKr2yhen2a\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'nukaqa'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'frontend-yii.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+    'HTTP_COOKIE' => '_csrf-frontend=527f29af69e43847e25ede8052979266c9f276f213209f4331ab31deba93bd10a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22YfC9Xz6uQ-Mt2u2NISM41v8urzHJaQ4_%22%3B%7D; advanced-frontend=imilsdvoi420u3u5mqn57ko1d3; CMSMOBICLIP=fmisbdmkqfk45rs3th76nna100; _csrf=e4d1be17550bc1c38a84518eb5be873784b27d805f001b61393f265d399828c8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22jvF0I4LuLrFwtUBojF_E5TQAwEyu3ePC%22%3B%7D; advanced-backend=e8t8d8s4413mqlu05tkb1mnjng; _csrf-backend=24a93d2c75c0f978873c6784e66a977a4dc1886081e7c7c3746a990890ff4e29a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22wslFLM8a1x02Beh7CdW-XubKr2yhen2a%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files\\Java\\jdk1.8.0_121\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Microsoft VS Code\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\TortoiseGit\\bin;E:\\software\\apache-maven-3.5.4\\bin;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;%ZOOKEEPER_HOME%\\bin;C:\\Program Files\\PuTTY\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Nguyen Van Hoa\\AppData\\Local\\GitHubDesktop\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34 Server at frontend-yii.local Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34'
+    'SERVER_NAME' => 'frontend-yii.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/yii-application/frontend/web'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/yii-application/frontend/web/index.php'
+    'REMOTE_PORT' => '26506'
+    'REDIRECT_URL' => '/user'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/user'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1637290069.422
+    'REQUEST_TIME' => 1637290069
+]
