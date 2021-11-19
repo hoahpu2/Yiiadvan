@@ -3,10 +3,12 @@
 namespace frontend\controllers;
 
 use app\models\User;
+use app\models\UploadForm;
 use app\models\UserSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * UserController implements the CRUD actions for User model.
@@ -67,9 +69,22 @@ class UserController extends Controller
     public function actionCreate()
     {
         $model = new User();
+        $modelUp = new UploadForm();
 
         if ($this->request->isPost) {
-            if ($model->load($this->request->post()) && $model->save()) {
+            if ($model->load($this->request->post())) {
+                
+                $modelUp->imageFile = UploadedFile::getInstance($model, 'avatar_url');
+                // $path = Yii::getAlias('@frontend') .'/web/upload/';
+                $fileName = $modelUp->upload();
+
+
+                // $model->avatar_url = UploadedFile::getInstance($model, 'avatar_url');
+                // xx($model->avatar_url);
+                // $model->avatar_url->saveAs($model->avatar_url->tempName, $path); // lưu ảnh vào thư mục uploads
+                $model->avatar_url = $fileName;
+                $model->save();
+
                 return $this->redirect(['view', 'id' => $model->id]);
             }
         } else {

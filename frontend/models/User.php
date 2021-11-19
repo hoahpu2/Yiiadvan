@@ -1,6 +1,7 @@
 <?php
 
 namespace app\models;
+use yii\web\UploadedFile;
 
 use Yii;
 
@@ -38,7 +39,8 @@ class User extends \yii\db\ActiveRecord
             [['date_create', 'date_update', 'last_login'], 'safe'],
             [['name', 'password'], 'string', 'max' => 255],
             [['sex'], 'string', 'max' => 10],
-            [['email', 'avatar_url'], 'string', 'max' => 100],
+            [['email'], 'string', 'max' => 100],
+            // [['avatar_url'], 'file','extensions' => 'png, jpg'],
         ];
     }
 
