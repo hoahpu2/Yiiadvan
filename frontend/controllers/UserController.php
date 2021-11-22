@@ -106,8 +106,20 @@ class UserController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $modelUp = new UploadForm();
 
-        if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
+        if ($this->request->isPost && $model->load($this->request->post())) {
+
+            $modelUp->imageFile = UploadedFile::getInstance($model, 'avatar_url');
+            // $path = Yii::getAlias('@frontend') .'/web/upload/';
+            $fileName = $modelUp->upload();
+
+
+            // $model->avatar_url = UploadedFile::getInstance($model, 'avatar_url');
+            // xx($model->avatar_url);
+            // $model->avatar_url->saveAs($model->avatar_url->tempName, $path); // lưu ảnh vào thư mục uploads
+            $model->avatar_url = $fileName;
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
